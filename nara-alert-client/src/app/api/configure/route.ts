@@ -5,13 +5,14 @@ export async function POST(request: Request) {
   try {
     const config: SearchConfig = await request.json();
     
-    // Here you would typically:
-    // 1. Validate the configuration
-    // 2. Store it in a database
-    // 3. Start the monitoring process
+    // Log the config to show it's being used
+    console.log('Received configuration:', config);
     
-    // For now, we'll just return a success response
-    return NextResponse.json({ success: true });
+    // TODO: Implement actual configuration storage
+    return NextResponse.json({ 
+      success: true,
+      savedConfig: config  // Echo back the received config
+    });
   } catch (error) {
     console.error('Configuration error:', error);
     return NextResponse.json(
