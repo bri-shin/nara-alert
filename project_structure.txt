@@ -1,0 +1,12 @@
+dain_scraper/
+├── config/
+│   └── config.py       # Configuration settings
+├── src/
+│   ├── api/
+│   │   └── data_go_kr.py  # API interaction module
+│   ├── slack/
+│   │   └── client.py      # Slack integration
+│   └── models/
+│       └── bid.py         # Data models
+├── main.py            # Main application entry
+└── requirements.txt   # Project dependencies 
